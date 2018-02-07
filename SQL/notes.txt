@@ -1,0 +1,172 @@
+Variable
+
+var nameOfVariable = ValueOfVariable   ---> syntax structure
+var numberOfSheep = 20   ---> example of variable
+
+console - will log the argument in it
+e.g. 
+var nameOfSheep = 'Fred';
+
+console.log(nameOfSheep)
+
+--will display Fred
+
+can store variables inside of variables
+var cars = 'car'
+var trucks = ' trucks'
+
+var vehicles = car + trucks
+
+
+functions are "mini programs" or mini tasks (should be specific and reusable)
+syntax: function nameOfFuntion() { return "hello world" } --> everything you want the code to do should be contained inside of the curly brackets or it will not do
+AND the return word will return your ""
+
+
+function needs to be called or "envoke" with a ()
+
+e.g.
+function compare() {
+  if(5!=5) {
+    console.log("YAY EQUALITY!!!")
+  }
+    else{
+      console.log("I THOUGHT YOU WERE FRIENDS")
+  }
+}
+
+compare()
+
+e.g.
+function compare() {
+  if(5!=5) {
+    return "YAY EQUALITY!!!"
+  }
+    else{
+      return "I THOUGHT YOU WERE FRIENDS"
+  }
+}
+
+console.log(compare())
+
+
+***
+Parentheses are for passing paramters in functions
+
+function functionName(a,b) {
+return a+b;
+}
+
+functionName (1,2)
+
+e.g.
+
+function adder(param1, param2) {
+  return param1 + param2;
+}
+
+console.log(adder(3,14));
+
+***
+
+function compare(a,b) {
+  if (a == b) {
+    console.log('Yay')
+  }
+
+else {
+  console.log('No')
+  
+}
+}
+
+compare(5,6)
+
+**
+
+Try to debug and understand everything first before completing it 
+Then make the backbones
+function properGreeting(a,b) {
+  var hour = new Date().getHours(); 
+
+ // Write your code here
+
+console.log(hour)
+
+}
+
+console.log(properGreeting(4,5))
+
+
+***
+
+function properGreeting() {
+  var hour = new Date().getHours(); 
+
+ // Write your code here
+if (hour >= 12){
+  return 'Good evening';
+} else {
+  return 'Good morning';
+}
+}
+
+console.log(properGreeting(4,5));
+
+***
+
+http://bit.ly/tf-trial   --> Free 2 week trial 
+
+http://bit.ly/tf-intro-js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From here down, you are not expected to 
+   understand.
+   
+ 
+   Nothing to see here!
+   
+*/
+
+
+
+// tests
+
+function testproperGreeting() {
+  let expected;
+  while (expected === undefined) {
+    if (new Date().getHours() < 13 ) {
+      expected = "Good morning"; 
+    }
+    else {
+      expected = "Good evening";
+    }  
+  }
+  if (properGreeting() == expected) {
+      console.log(properGreeting());
+      console.log('SUCCESS: `properGreeting` is working');
+      return true;
+    }
+   else {
+      console.log('FAILURE: `properGreeting` is not working');
+      console.log('`properGreeting` should return: ' + expected);
+      return false;
+   }
+}
+
+testproperGreeting();
+
